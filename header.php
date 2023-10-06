@@ -22,7 +22,7 @@
             <a href="#">Contact me</a>
         </nav>
 
-        <nav class="navbar">
+        <nav class="navbar-icons">
             <a href="#"><i class='bx bx-user'></i></a>
             <a href="#"><i class='bx bx-cart'></i></a>
         </nav>
