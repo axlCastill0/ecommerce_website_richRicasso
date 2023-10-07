@@ -11,7 +11,7 @@
 <body>
     <?php include("header.php") ?>
     <main class="container">
-        
+        <h1>hello</h1>
     </main>
     <?php include("footer.php") ?>
 </body>
