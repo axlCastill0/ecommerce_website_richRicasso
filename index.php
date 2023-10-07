@@ -15,6 +15,7 @@
 
 <body>
     <?php include("header.php") ?>
+    <img src="intro-shirt.png" alt="cool shirt" id="intro-img">
     <main class="container">
         <div class="story">
             <img src="img/rich-ricasso.png" alt="Rich Ricasso picture">
