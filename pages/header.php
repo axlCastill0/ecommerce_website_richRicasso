@@ -18,8 +18,8 @@
         </label>
 
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Apparel</a>
+            <a href="index.php">Home</a>
+            <a href="pages/shop.php">Shop</a>
             <a href="#">About</a>
             <a href="#">Contact me</a>
         </nav>
