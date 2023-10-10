@@ -1,3 +1,19 @@
+<?php
+
+$conn = mysqli_connect('localhost', 'root', '', 'ricassodb');
+
+if (!$conn) {
+    echo 'Connection error: ' . mysqli_connect_error();
+}
+
+$sql = 'SELECT Name, Price FROM products LIMIT 4';
+
+$result = mysqli_query($conn, $sql);
+
+$products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,14 +33,20 @@
     <?php include("pages/header.php") ?>
     <img src="img/intro-shirt.png" alt="cool shirt" id="intro-img">
     <main class="container">
-        <div class="story">
-            <img src="img/rich-ricasso.png" alt="Rich Ricasso picture">
-            <p>Rich Ricasso, le célèbre cravatier et chemisier, souhaite lancer sa boutique en ligne pour présenter sa
-                nouvelle gamme d'été en soie unisexe. Son style, inspiré du mouvement vaporwave et vaporfashion accentue
-                les tons pastel tels que le bleu ciel, le rose poudré et le violet lavande, et a ainsi conquis le monde
-                de l'ultra-luxe. Il souhaite maintenant ouvrir sa gamme au grand public. Votre mission est de concevoir
-                et réaliser cette plateforme, mettant en avant la singularité et le luxe des produits.</p>
-        </div>
+        <div class="popular-container">
+            <h2 class="popular-title">Popular</h2>
+            <div class="popular-cards">
+                <?php
+                for ($i = 0; $i < count($products); $i++) {
+                    echo "
+                <div class=\"product-card\">
+                    <img src=\"productImages/" . $i + 1 . ".png\">
+                    <p>" . $products[$i]["Name"] . "</p>
+                    <p>" . $products[$i]["Price"] . "</p>
+                </div>";
+                }
+                ?>
+            </div>
     </main>
     <?php include("pages/footer.php") ?>
 </body>
