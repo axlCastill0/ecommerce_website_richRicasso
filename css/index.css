@@ -1,0 +1,45 @@
+main * {
+	color: #000;
+}
+
+#intro-img {
+	width: 100%;
+	display: flex;
+	text-align: center;
+}
+
+.popular-container {
+	margin-block: 100px;
+	padding: 30px;
+}
+
+.popular-title {
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.popular-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	margin-block: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 250px;
+	align-items: center;
+	background: rgb(231, 231, 231);
+}
+
+.product-description {
+	padding: 50px;
+}
+
+.product-card img {
+	height: 250px;
+}
