@@ -9,7 +9,7 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Rich Ricasso</a>
+        <a href="/PHP/Projet02/" class="logo">Rich Ricasso</a>
 
         <input type="checkbox" id="check">
         <label for="check" class="icons">
@@ -25,7 +25,7 @@
         </nav>
 
         <nav class="navbar-icons">
-            <a href="/PHP/Projet02/pages/login-register.php"><i class='bx bx-user'></i></a>
+            <a href="/PHP/Projet02/pages/login.php"><i class='bx bx-user'></i></a>
             <a href="#"><i class='bx bx-cart'></i></a>
         </nav>
     </header>

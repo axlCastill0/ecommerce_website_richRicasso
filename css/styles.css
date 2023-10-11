@@ -119,7 +119,6 @@
 	#check:checked ~ .navbar a {
 		transform: translateY(0);
 	}
-
 }
 
 /* FOOTER */

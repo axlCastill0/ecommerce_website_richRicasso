@@ -3,9 +3,10 @@ main * {
 }
 
 #intro-img {
+	height: 100%;
 	width: 100%;
-	display: flex;
-	text-align: center;
+	left: 0;
+	top: 0;
 }
 
 .popular-container {
