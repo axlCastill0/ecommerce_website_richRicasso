@@ -3,9 +3,9 @@ main * {
 }
 
 #intro-img {
-	background-size: 100%;
-	background-position: center;
 	width: 100%;
+	display: flex;
+	text-align: center;
 }
 
 .popular-container {
@@ -21,19 +21,23 @@ main * {
 
 .popular-cards {
 	display: flex;
-	margin: 15px;
-	justify-content: space-between;
-	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .product-card {
 	display: flex;
 	flex-direction: column;
+	margin-block: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 250px;
 	align-items: center;
-	height: 350px;
-	padding: 30px;
-	margin: 15px;
 	background: rgb(231, 231, 231);
+}
+
+.product-description {
+	padding: 50px;
 }
 
 .product-card img {

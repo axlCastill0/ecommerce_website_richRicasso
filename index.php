@@ -31,7 +31,9 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body>
     <?php include("pages/header.php") ?>
-    <img src="img/intro-shirt.png" alt="cool shirt" id="intro-img">
+    <div class="intro-image-cont">
+        <img src="img/intro-shirt.png" alt="cool shirt" id="intro-img">
+    </div>
     <main class="container">
         <div class="popular-container">
             <h2 class="popular-title">Popular</h2>
@@ -41,8 +43,10 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     echo "
                 <div class=\"product-card\">
                     <img src=\"productImages/" . $i + 1 . ".png\">
-                    <p>" . $products[$i]["Name"] . "</p>
-                    <p>" . $products[$i]["Price"] . "</p>
+                    <div class\"product-description\">
+                        <p>" . $products[$i]["Name"] . "</p>
+                        <p>" . $products[$i]["Price"] . "</p>
+                    </div>
                 </div>";
                 }
                 ?>
