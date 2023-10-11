@@ -34,8 +34,10 @@
                     <span></span>
                     <label>Password</label>
                 </div>
-                <input type="submit" value="Sing up">
-                <div class="signup_link"></div>
+                <input type="submit" value="singup">
+                <div class="signup_link">
+                    Already a member? <a href="/PHP/Projet02/pages/login.php">Login</a>
+                </div>
             </form>
         </div>
     </main>

@@ -29,7 +29,7 @@
                     <span></span>
                     <label>Password</label>
                 </div>
-                <input type="submit" value="Login">
+                <input type="submit" value="login">
                 <div class="signup_link">
                     Not a member? <a href="/PHP/Projet02/pages/register.php">Register</a>
                 </div>
