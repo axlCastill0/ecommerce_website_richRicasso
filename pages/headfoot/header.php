@@ -18,14 +18,14 @@
         </label>
 
         <nav class="navbar">
-            <a href="index.php">Home</a>
-            <a href="pages/shop.php">Shop</a>
+            <a href="/PHP/Projet02/">Home</a>
+            <a href="/PHP/Projet02/pages/shop.php">Shop</a>
             <a href="#">About</a>
             <a href="#">Contact me</a>
         </nav>
 
         <nav class="navbar-icons">
-            <a href="#"><i class='bx bx-user'></i></a>
+            <a href="/PHP/Projet02/pages/login-register.php"><i class='bx bx-user'></i></a>
             <a href="#"><i class='bx bx-cart'></i></a>
         </nav>
     </header>

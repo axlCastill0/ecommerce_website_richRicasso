@@ -18,7 +18,7 @@ include 'includes/class-autoload.inc.php';
 </head>
 
 <body>
-    <?php include("pages/headfoot/header.php") ?>
+    <?php include('pages\headfoot\header.php') ?>
     <div class="intro-image-container">
         <img src="img/intro-shirt.png" alt="cool shirt" id="intro-img">
     </div>
@@ -29,7 +29,7 @@ include 'includes/class-autoload.inc.php';
 
             </div>
     </main>
-    <?php include("pages/headfoot/footer.php") ?>
+    <?php include('pages\headfoot\footer.php') ?>
 </body>
 
 </html>
