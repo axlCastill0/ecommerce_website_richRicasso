@@ -20,16 +20,16 @@
             <h1>Login</h1>
             <form method="post">
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" name="uid" required>
                     <span></span>
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" required>
+                    <input type="password" type="pwd" required>
                     <span></span>
                     <label>Password</label>
                 </div>
-                <input type="submit" value="login">
+                <input type="submit" value="Login" name="submit">
                 <div class="signup_link">
                     Not a member? <a href="/PHP/Projet02/pages/register.php">Register</a>
                 </div>

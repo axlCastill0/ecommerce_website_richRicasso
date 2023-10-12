@@ -18,23 +18,23 @@
     <main>
         <div class="center">
             <h1>Register</h1>
-            <form method="post">
+            <form action="/PHP/Projet02/includes/singup.inc.php" method="post">
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" name="uid" required>
                     <span></span>
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                     <span></span>
                     <label>Email</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" required>
+                    <input type="password" name="pwd" required>
                     <span></span>
                     <label>Password</label>
                 </div>
-                <input type="submit" value="singup">
+                <input type="submit" value="Sing up" name="submit">
                 <div class="signup_link">
                     Already a member? <a href="/PHP/Projet02/pages/login.php">Login</a>
                 </div>
