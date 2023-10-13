@@ -1,5 +1,5 @@
 <?php
-include 'includes/class-autoload.inc.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,11 @@ include 'includes/class-autoload.inc.php';
         <div class="popular-container">
             <h2 class="popular-title">Popular</h2>
             <div class="popular-cards">
-
+                <?php
+                    if(isset($_SESSION["user_id"])) {
+                        echo '<h1>HELLO RICASSO</h1>';
+                    }
+                ?>
             </div>
     </main>
     <?php include('pages\headfoot\footer.php') ?>

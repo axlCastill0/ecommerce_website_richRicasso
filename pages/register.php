@@ -18,7 +18,7 @@
     <main>
         <div class="center">
             <h1>Register</h1>
-            <form action="/PHP/Projet02/includes/singup.inc.php" method="post">
+            <form action="/PHP/Projet02/includes/register.inc.php" method="post">
                 <div class="txt_field">
                     <input type="text" name="uid" required>
                     <span></span>

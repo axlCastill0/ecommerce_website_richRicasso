@@ -11,6 +11,15 @@ class UsersController extends Users {
         $this->pwd = $pwd;
     }
 
+    public function loginUser() {
+        if($this->emptyInput() == false) {
+            header("location: ../index.php?error=emptyinput");
+            exit();
+        }
+
+        $this->getUser($this->uid, $this->pwd);
+    }
+
     public function registerUser() {
         if($this->emptyInput() == false) {
             header("location: ../index.php?error=emptyinput");

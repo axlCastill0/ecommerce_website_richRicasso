@@ -18,14 +18,14 @@
     <main>
         <div class="center">
             <h1>Login</h1>
-            <form method="post">
+            <form action="/PHP/Projet02/includes/login.inc.php" method="post">
                 <div class="txt_field">
                     <input type="text" name="uid" required>
                     <span></span>
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" type="pwd" required>
+                    <input type="password" name="pwd" required>
                     <span></span>
                     <label>Password</label>
                 </div>
