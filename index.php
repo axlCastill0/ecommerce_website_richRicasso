@@ -28,7 +28,7 @@ session_start();
             <div class="popular-cards">
                 <?php
                     if(isset($_SESSION["user_id"])) {
-                        echo '<h1>HELLO RICASSO</h1>';
+                        echo '<h1>HELLO '. $_SESSION["uid"] .'</h1>';
                     }
                 ?>
             </div>

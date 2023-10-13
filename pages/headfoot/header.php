@@ -20,7 +20,6 @@
         <nav class="navbar">
             <a href="/PHP/Projet02/">Home</a>
             <a href="/PHP/Projet02/pages/shop.php">Shop</a>
-            <a href="#">About</a>
             <a href="#">Contact me</a>
         </nav>
 

@@ -57,6 +57,10 @@ class Users extends Dbh
             session_start();
             $_SESSION["user_id"] = $user[0]["user_id"];
             $_SESSION["uid"] = $user[0]["uid"];
+            $_SESSION["user_email"] = $user[0]["user_email"];
+            $_SESSION["user_firstname"] = $user[0]["user_firstname"];
+            $_SESSION["user_lastname"] = $user[0]["user_lastname"];
+            $_SESSION["user_newsletter"] = $user[0]["user_newsletter"];
 
             $stmt = null;
         }
