@@ -16,5 +16,4 @@ if(isset($_POST["submit"])) {
 
     // Going back to home page
     header("location: /PHP/Projet02/index.php?error=none");
-
 }

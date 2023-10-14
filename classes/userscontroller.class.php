@@ -13,7 +13,7 @@ class UsersController extends Users {
 
     public function loginUser() {
         if($this->emptyInput() == false) {
-            header("location: ../index.php?error=emptyinput");
+            header("location: /PHP/Projet02/pages/login.php?error=emptyinput");
             exit();
         }
 
@@ -22,19 +22,19 @@ class UsersController extends Users {
 
     public function registerUser() {
         if($this->emptyInput() == false) {
-            header("location: ../index.php?error=emptyinput");
+            header("location: /PHP/Projet02/pages/register.php?error=emptyinput");
             exit();
         }
         if($this->invalidUid() == false) {
-            header("location: ../index.php?error=invaliduid");
+            header("location: /PHP/Projet02/pages/register.php?error=invaliduid");
             exit();
         }
         if($this->invalidEmail() == false) {
-            header("location: ../index.php?error=invalidemail");
+            header("location: /PHP/Projet02/pages/register.php?error=invalidemail");
             exit();
         }
         if($this->existingUser() == false) {
-            header("location: ../index.php?error=existinguser");
+            header("location: /PHP/Projet02/pages/register.php?error=existinguser");
             exit();
         }
 

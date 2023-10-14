@@ -11,7 +11,7 @@ class Users extends Dbh
 
         if (!$stmt->execute(array($uid, $email, $hashedPwd))) {
             $stmt = null;
-            header("location: ../index.php?error=stmtfailed");
+            header("location: /PHP/Projet02/pages/register.php?error=stmtfailed");
             exit();
         }
 
@@ -23,13 +23,13 @@ class Users extends Dbh
         
         if(!$stmt->execute(array($uid))) {
             $stmt = null;
-            header("location: ../index.php?error=stmtfailed");
+            header("location: /PHP/Projet02/pages/login.php?error=stmtfailed");
             exit();
         }
 
         if($stmt->rowCount() == 0) {
             $stmt = null;
-            header("location: ../index.php?usernotfound");
+            header("location: /PHP/Projet02/pages/login.php?usernotfound");
             exit();
         }
 
@@ -38,18 +38,18 @@ class Users extends Dbh
 
         if($checkPwd == false) {
             $stmt = null;
-            header("location: ../index.php?error=incorrectpwd");
+            header("location: /PHP/Projet02/pages/login.php?error=incorrectpwd");
             exit();
         } else if($checkPwd == true) {
             $stmt = $this->connect()->prepare('SELECT * FROM users WHERE uid = ?;');
             if(!$stmt->execute(array($uid))) {
                 $stmt = null;
-                header("location: ../index.php?error=stmtfailed");
+                header("location: /PHP/Projet02/pages/index.php?error=stmtfailed");
                 exit();
             }
             if($stmt->rowCount() == 0) {
                 $stmt = null;
-                header("location: ../index.php?usernotfound");
+                header("location: /PHP/Projet02/pages/login.php?usernotfound");
                 exit();
             }
             $user = $stmt->fetchAll();
@@ -73,13 +73,14 @@ class Users extends Dbh
         $stmt = $this->connect()->prepare('SELECT uid FROM users WHERE uid = ? OR user_email = ?;');
         if (!$stmt->execute(array($uid, $email))) {
             $stmt = null;
-            header("location: ../index.php?error=stmtfailed");
+            header("location: /PHP/Projet02/pages/register.php?error=stmtfailed");
             exit();
         }
         $resultCheck = true;
         if ($stmt->rowCount() > 0) {
             $resultCheck = false;
         }
+        $stmt = null;
         return $resultCheck;
     }
 }

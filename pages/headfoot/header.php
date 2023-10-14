@@ -25,14 +25,13 @@
 
         <nav class="navbar-icons">
             <?php
-                if(isset($_SESSION["user_id"])) {
-            ?>            
+            if (isset($_SESSION["user_id"])) {
+                ?>
                 <a href="/PHP/Projet02/pages/account.php"><i class='bx bx-user-circle'></i></a>
-                <a href="#"><i class='bx bx-cart'></i></a>
             <?php } else { ?>
                 <a href="/PHP/Projet02/pages/login.php"><i class='bx bx-user-plus'></i></a>
-                <a href="#"><i class='bx bx-cart'></i></a>
             <?php } ?>
+            <a href="#"><i class='bx bx-cart'></i></a>
         </nav>
     </header>
 </body>

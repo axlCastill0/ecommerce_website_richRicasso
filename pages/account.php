@@ -20,7 +20,7 @@ session_start();
 
 <body>
     <?php include(__DIR__ . '/headfoot/header.php'); ?>
-    <form action="" method="post">
+    <form action="/PHP/Projet02/includes/edituser.inc.php" method="post">
         <div class="container light-style flex-grow-1 container-p-y">
             <h4 class="h4 font-weight-bold py-3 mb-4">
                 Account settings
@@ -32,8 +32,6 @@ session_start();
                             <a class="list-group-item list-group-item-action active" data-toggle="list"
                                 href="#account-general">General</a>
                             <a class="list-group-item list-group-item-action" data-toggle="list"
-                                href="#account-change-password">Change password</a>
-                            <a class="list-group-item list-group-item-action" data-toggle="list"
                                 href="#account-notifications">Notifications</a>
                         </div>
                     </div>
@@ -44,35 +42,19 @@ session_start();
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label class="form-label">Username</label>
-                                        <?php echo '<input type="text" name="uid" class="form-control mb-1" value="' . $_SESSION["uid"] . '">' ?>
+                                        <?php echo '<input type="text" class="form-control mb-1" value="' . $_SESSION["uid"] . '" disabled>' ?>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">First Name</label>
-                                        <?php echo '<input type="text" name="user_firstname" class="form-control mb-1" value="' . $_SESSION["user_firstname"] . '">' ?>
+                                        <?php echo '<input type="text" name="firstname" class="form-control mb-1" value="' . $_SESSION["user_firstname"] . '">' ?>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Last Name</label>
-                                        <?php echo '<input type="text" name="user_lastname" class="form-control mb-1" value="' . $_SESSION["user_lastname"] . '">' ?>
+                                        <?php echo '<input type="text" name="lastname" class="form-control mb-1" value="' . $_SESSION["user_lastname"] . '">' ?>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">E-mail</label>
-                                        <?php echo '<input type="text" name="user_email" class="form-control mb-1" value="' . $_SESSION["user_email"] . '">' ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="account-change-password">
-                                <div class="card-body pb-2">
-                                    <div class="form-group">
-                                        <label class="form-label">Current password</label>
-                                        <input type="password" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">New password</label>
-                                        <input type="password" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Repeat new password</label>
-                                        <input type="password" class="form-control">
+                                        <?php echo '<input type="text" name="email" class="form-control mb-1" value="' . $_SESSION["user_email"] . '" required>' ?>
                                     </div>
                                 </div>
                             </div>
@@ -83,14 +65,10 @@ session_start();
                                         <label class="switcher">
                                             <?php
                                             if ($_SESSION["user_newsletter"] == 0) {
-                                                echo '<input type="checkbox" class="switcher-input">';
+                                                echo '<input type="checkbox" name="newsletter" class="switcher-input">';
                                             } else {
-                                                echo '<input type="checkbox" class="switcher-input">';
+                                                echo '<input type="checkbox" name="newsletter" class="switcher-input" checked>';
                                             } ?>
-                                            <span class="switcher-indicator">
-                                                <span class="switcher-yes"></span>
-                                                <span class="switcher-no"></span>
-                                            </span>
                                             <span class="switcher-label">Email me about new apparel and products</span>
                                         </label>
                                     </div>
@@ -103,7 +81,7 @@ session_start();
             <div class="button-container text-right mt-3">
                 <button type="button" class="btn btn-danger"><a href="/PHP/Projet02/includes/logout.inc.php">Log
                         out</a></button>&nbsp;
-                <button type="submit" class="btn btn-success" name="submit-edit">Save changes</button>&nbsp;
+                <button type="submit" class="btn btn-success" name="submit">Save changes</button>&nbsp;
                 <button type="button" class="btn btn-default"><a href="/PHP/Projet02/">Cancel</a></button>
             </div>
         </div>
