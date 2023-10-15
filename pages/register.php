@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <?php include(__DIR__ . '/headfoot/header.php'); ?>
+    <?php include(__DIR__ . '/includes/header.php'); ?>
     <main>
         <div class="center">
             <h1>Register</h1>

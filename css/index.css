@@ -2,45 +2,39 @@ main * {
 	color: #000;
 }
 
-#intro-img {
-	height: 100%;
+.intro-image-container img {
 	width: 100%;
-	left: 0;
-	top: 0;
+	object-fit: cover;
 }
 
-.popular-container {
-	margin-block: 100px;
-	padding: 30px;
+p {
+	font-size: 1.2rem;
 }
 
-.popular-title {
-	font-size: 2rem;
+.section-title {
+	font-size: 2.2rem;
+	font-weight: 600;
+	margin-top: 25vh;
+	margin-bottom: 7vh;
+	margin-left: 50px;
 	text-transform: uppercase;
-	margin-bottom: 50px;
+	letter-spacing: 2px;
 }
 
-.popular-cards {
+.introduction-container {
+	margin: 50px;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
-.product-card {
-	display: flex;
-	flex-direction: column;
-	margin-block: 20px;
-	margin-right: 10px;
-	margin-left: 10px;
-	width: 250px;
-	align-items: center;
-	background: rgb(231, 231, 231);
-}
-
-.product-description {
+.introduction p {
 	padding: 50px;
 }
 
-.product-card img {
-	height: 250px;
+.introduction img {
+	width: 35%;
+}
+
+.description p {
+	padding: 0px 50px;
 }

@@ -19,7 +19,7 @@ session_start();
 </head>
 
 <body>
-    <?php include(__DIR__ . '/headfoot/header.php'); ?>
+    <?php include(__DIR__ . '/includes/header.php'); ?>
     <form action="/PHP/Projet02/includes/edituser.inc.php" method="post">
         <div class="container light-style flex-grow-1 container-p-y">
             <h4 class="h4 font-weight-bold py-3 mb-4">

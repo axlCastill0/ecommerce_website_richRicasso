@@ -18,22 +18,43 @@ session_start();
 </head>
 
 <body>
-    <?php include('pages\headfoot\header.php') ?>
+    <?php include('pages\includes\header.php') ?>
     <div class="intro-image-container">
-        <img src="img/intro-shirt.png" alt="cool shirt" id="intro-img">
+        <img src="img/intro-shirt.png" alt="cool shirt">
     </div>
     <main class="main-container">
-        <div class="popular-container">
-            <h2 class="popular-title">Popular</h2>
-            <div class="popular-cards">
-                <?php
-                    if(isset($_SESSION["user_id"])) {
-                        echo '<h1>HELLO '. $_SESSION["uid"] .'</h1>';
-                    }
-                ?>
+        <div class="introduction">
+            <h2 class="section-title">Rich Ricasso</h2>
+            <div class="introduction-container">
+                <img src="/PHP/Projet02/img/rich-ricasso.png" alt="rich ricasso portrait">
+                <p>Rich Ricasso, le célèbre cravatier et chemisier, souhaite lancer sa boutique en ligne pour présenter
+                    sa nouvelle gamme d'été en soie unisexe. Son style, inspiré du mouvement vaporwave et vaporfashion
+                    accentue les tons pastel tels que le bleu ciel, le rose poudré et le violet lavande, et a ainsi
+                    conquis le monde de l'ultra-luxe. Il souhaite maintenant ouvrir sa gamme au grand public. Votre
+                    mission est de concevoir et réaliser cette plateforme, mettant en avant la singularité et le luxe
+                    des produits.</p>
             </div>
+        </div>
+        <div class="collection">
+            <h2 class="section-title">Summer Silk Collection</h2>
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel odio repellat sequi veniam
+                    obcaecati dolore sapiente omnis sint. Ducimus esse corporis et animi numquam? Sapiente rem quae
+                    placeat at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur a architecto
+                    aspernatur optio officia quidem dolores sequi officiis tempora aut. Incidunt iste explicabo
+                    voluptatem aliquid debitis atque autem temporibus veniam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eum laborum tempora, libero
+                    perferendis nulla natus consequatur animi dicta. Minima, eos magnam. Laboriosam, officia velit ipsam
+                    placeat magni dolor repellat!</p>
+            </div>
+            <div class="products-container">
+
+            </div>
+        </div>
     </main>
-    <?php include('pages\headfoot\footer.php') ?>
+    <?php include('pages\includes\footer.php') ?>
+
+    <script src="/PHP/Projet02/js/index.js"></script>
 </body>
 
 </html>
