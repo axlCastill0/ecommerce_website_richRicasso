@@ -1,0 +1,40 @@
+main * {
+    color: #000;
+}
+
+main {
+    margin-top: 20vh;
+}
+
+h3 {
+    margin: 15px 0px;
+}
+
+.setting {
+    margin: 10px 15px;
+}
+
+.main-container {
+    display: flex;
+    padding: 40px;
+}
+
+.settings-container {
+    padding: 25px;
+    width: 25%;
+    border: 1px solid #000;
+}
+
+.type-setting {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container {
+    width: 100%;
+}
+
+.products-container {
+    padding: 25px;
+    width: 75%;
+}

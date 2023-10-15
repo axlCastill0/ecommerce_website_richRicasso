@@ -53,8 +53,6 @@ session_start();
         </div>
     </main>
     <?php include('pages\includes\footer.php') ?>
-
-    <script src="/PHP/Projet02/js/index.js"></script>
 </body>
 
 </html>

@@ -8,13 +8,6 @@
 	color: #fff;
 }
 
-*,
-*:before,
-*:after {
-	outline: none;
-	box-sizing: border-box;
-}
-
 img {
 	border: 0;
 }
@@ -24,29 +17,12 @@ img {
 	width: 0px;
 }
 
-.cursor {
-	pointer-events: none;
-
-	&__ball {
-		position: fixed;
-		top: 0;
-		left: 0;
-		mix-blend-mode: difference;
-		z-index: 1000;
-
-		circle {
-			fill: #f7f8fa;
-		}
-	}
-}
-
 /* HEADER */
 .header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(15px);
+	background-color: #000;
 	width: 100%;
 	padding: 2rem 10%;
 	display: flex;
