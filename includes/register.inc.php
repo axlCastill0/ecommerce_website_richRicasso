@@ -15,6 +15,8 @@ if(isset($_POST["submit"])) {
     // Running error handlers
     $user->registerUser();
 
+    $user->loginUser();
+
     // Going back to home page
     header("location: /PHP/Projet02/index.php?error=none");
 
