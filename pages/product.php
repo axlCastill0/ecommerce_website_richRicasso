@@ -14,7 +14,7 @@ if (isset($_GET["id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RR - Product</title>
     <link rel="stylesheet" href="/PHP/Projet02/css/styles.css">
-    <link rel="stylesheet" href="/PHP/Projet02/css/shop.css">
+    <link rel="stylesheet" href="/PHP/Projet02/css/product.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -23,8 +23,14 @@ if (isset($_GET["id"])) {
 
 <body>
     <?php include("includes/header.php"); ?>
-    <main>
-        <h1><?php echo $id; ?></h1>
+    <main class="main-container">
+            <?php
+            include '../classes/dbh.class.php';
+            include '../classes/products.class.php';
+            include '../classes/productsview.class.php';
+            $product = new ProductsView();
+            $product->showProductById($id);
+            ?>
     </main>
     <?php include("includes/footer.php"); ?>
 </body>

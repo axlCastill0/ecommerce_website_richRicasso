@@ -1,0 +1,47 @@
+main * {
+	color: #000;
+}
+
+img {
+	height: 600px;
+}
+
+.product {
+	padding: 30px 80px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-information {
+	padding: 0px 50px;
+	display: block;
+	justify-content: center;
+}
+
+.product-title {
+	font-weight: 600;
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.info {
+	margin-bottom: 25px;
+}
+
+.bn32 {
+	border-color: #ffffff;
+	padding: 0.6em 2.3em;
+	cursor: pointer;
+	font-size: 1em;
+	color: #000;
+	background-image: linear-gradient(45deg, transparent 50%, #000000 50%);
+	background-position: 25%;
+	background-size: 400%;
+	-webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+	transition: background 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.bn32:hover {
+	color: #fff;
+	background-position: 100%;
+}

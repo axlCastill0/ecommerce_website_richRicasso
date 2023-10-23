@@ -12,6 +12,10 @@ img {
 	border: 0;
 }
 
+.main-container {
+	margin-top: 20vh;
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
 	width: 0px;
