@@ -15,6 +15,7 @@
                 <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="/PHP/Projet02/pages/infoletter.php"><i class="far fa-newspaper"></i></a></li>
             </ul>
         </div>
         <div class="footer-bottom">
