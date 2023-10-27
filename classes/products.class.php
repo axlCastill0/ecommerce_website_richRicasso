@@ -36,7 +36,7 @@ class Products extends Dbh {
             header('location: /PHP/Projet02/index.php?error=stmtfailed');
             exit();
         }
-        $summer = $stmt->fetch();
+        $summer = $stmt->fetchAll();
         $stmt = null;
         return $summer;
     }

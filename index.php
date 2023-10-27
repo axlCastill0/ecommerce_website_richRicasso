@@ -51,9 +51,9 @@ session_start();
                 <div class="slider-wrapper">
                     <div class="slider">
                         <?php 
-                        include '../classes/dbh.class.php';
-                        include '../classes/products.class.php';
-                        include '../classes/productsview.class.php';
+                        include 'classes/dbh.class.php';
+                        include 'classes/products.class.php';
+                        include 'classes/productsview.class.php';
                         $products = new ProductsView();
                         $numberSlides = $products->showProductsSummerSilk();
                         ?>

@@ -56,6 +56,7 @@ class ProductsView extends Products {
         foreach ($this->productsArray as $product) {
             echo '<a href="/PHP/Projet02/pages/product.php?id=' . $product['prod_id'] . '">' .
             '<img id="slide-'. $i .'" src="/PHP/Projet02/img/productImages/'. $product['prod_id'] . '.png"/></a>';
+            $i++;
         }
         return $i;
     }
