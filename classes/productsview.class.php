@@ -49,4 +49,14 @@ class ProductsView extends Products {
         </div>
         <p class="product-description">' . $product['prod_description'] . '</p>';
     }
+
+    public function showProductsSummerSilk() {
+        $this->productsArray = $this->getProductsSummerSilk();
+        $i = 1;
+        foreach ($this->productsArray as $product) {
+            echo '<a href="/PHP/Projet02/pages/product.php?id=' . $product['prod_id'] . '">' .
+            '<img id="slide-'. $i .'" src="/PHP/Projet02/img/productImages/'. $product['prod_id'] . '.png"/></a>';
+        }
+        return $i;
+    }
 }

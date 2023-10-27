@@ -47,9 +47,26 @@ session_start();
                     perferendis nulla natus consequatur animi dicta. Minima, eos magnam. Laboriosam, officia velit ipsam
                     placeat magni dolor repellat!</p>
             </div>
-            <div class="products-container">
-
-            </div>
+            <section class="products-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <?php 
+                        include '../classes/dbh.class.php';
+                        include '../classes/products.class.php';
+                        include '../classes/productsview.class.php';
+                        $products = new ProductsView();
+                        $numberSlides = $products->showProductsSummerSilk();
+                        ?>
+                    </div>
+                    <div class="slider-nav">
+                        <?php
+                        for ($i = 1; $i < $numberSlides; $i++) {
+                            echo '<a href="#slide-' . $i . '"></a>';
+                        }
+                        ?>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
     <?php include('pages\includes\footer.php') ?>

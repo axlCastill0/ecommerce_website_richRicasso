@@ -28,4 +28,16 @@ class Products extends Dbh {
         $stmt = null;
         return $product;
     }
+
+    protected function getProductsSummerSilk() {
+        $stmt = $this->connect()->query('SELECT * FROM products WHERE prod_collection = "Summer Silk";');
+        if(!$stmt) {
+            $stmt = null;
+            header('location: /PHP/Projet02/index.php?error=stmtfailed');
+            exit();
+        }
+        $summer = $stmt->fetch();
+        $stmt = null;
+        return $summer;
+    }
 }
