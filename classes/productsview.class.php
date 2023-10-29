@@ -60,4 +60,31 @@ class ProductsView extends Products {
         }
         return $i;
     }
+
+    public function showFilterSettings($checked) {
+        $filterSettings = $this->getFilterSettings();
+        foreach ($filterSettings as $setting) {
+            if(in_array($setting['prod_id'], $checked)) {
+                echo '<div class="setting"><input type="checkbox" name="colors[]" value="' . $setting['prod_id'] . '" checked>'
+                . $setting['color'] . '</div>';
+            } else {
+                echo '<div class="setting"><input type="checkbox" name="colors[]" value="' . $setting['prod_id'] . '">'
+                . $setting['color'] . '</div>';
+            }
+        }
+    }
+
+    public function getIdsWithColor($colorId) {
+        $ids = $this->getIdsWithColorId($colorId);
+        return $ids;
+    }
+
+    public function showProductContainer($id) {
+        $product = $this->getProductById($id);
+        return '<div class="product-card"><a href="/PHP/Projet02/pages/product.php?id='.$product['prod_id'].'">'
+        . '<img src="/PHP/Projet02/img/productImages/' . $product['prod_id'] . '.png">'
+        . '<div class="product-info"><h3 class="product-title">' . $product['prod_name'] . '</h3>'
+        . '<h4 class="product-price">' . $product['prod_price'] . '</h4></div></a></div>';
+    }
+
 }

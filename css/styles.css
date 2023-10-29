@@ -8,6 +8,10 @@
 	color: #fff;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 img {
 	border: 0;
 }

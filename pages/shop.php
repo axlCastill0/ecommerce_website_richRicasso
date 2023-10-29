@@ -1,5 +1,24 @@
 <?php
 session_start();
+include '../classes/dbh.class.php';
+include '../classes/products.class.php';
+include '../classes/productsview.class.php';
+$products = new ProductsView();
+$checked = [];
+$filteredIds = [];
+if (isset($_GET['colors'])) {
+    $checked = $_GET['colors'];
+    foreach($checked as $colorId) {
+        $ids[] = $products->getIdsWithColor($colorId);
+        foreach($ids as $id) {
+            foreach($id as $i) {
+                $filteredIds[] = $i;
+            }
+        }
+    }
+    sort($filteredIds);
+    $filteredIds = array_unique($filteredIds);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,70 +40,22 @@ session_start();
     <main>
         <div class="main-container">
             <div class="settings-container">
-                <div class="type-setting settings">
-                    <h3 class="setting-title">Type</h3>
-                    <div class="setting">
-                        <input type="checkbox" id="shirt" value="Shirt">
-                        <label for="shirt">Shirt</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="tie" value="Tie">
-                        <label for="tie">Tie</label>
-                    </div>
-                </div>
-                <div class="price-setting settings">
-                    <h3 class="setting-title">Price</h3>
-                    <div class="setting">
-                        <input type="checkbox" id="highest" value="highest">
-                        <label for="highest">Highest to Lowest</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="lowest" value="lowest">
-                        <label for="lowest">Lowest to Highest</label>
-                    </div>
-                </div>
-                <div class="collection-setting settings">
-                    <h3 class="setting-title">Collection</h3>
-                    <div class="setting">
-                        <input type="checkbox" id="first-edition" value="first-edition">
-                        <label for="first-edition">First Edition</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="summer-silk" value="summer-silk">
-                        <label for="summer-silk">Summer Silk</label>
-                    </div>
-                </div>
-                <div class="color-setting settings">
-                    <h3 class="setting-title">Color</h3>
-                    <div class="setting">
-                        <input type="checkbox" id="red" value="red">
-                        <label for="red">Red</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="blue" value="blue">
-                        <label for="blue">Blue</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="pink" value="pink">
-                        <label for="pink">Pink</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="green" value="green">
-                        <label for="green">Green</label>
-                    </div>
-                    <div class="setting">
-                        <input type="checkbox" id="purple" value="purple">
-                        <label for="purple">Purple</label>
-                    </div>
-                </div>
+                <form action="" method="get">
+                    <button type="submit" class="btn-search">Filter</button>
+                    <?php
+                    $products->showFilterSettings($checked);
+                    ?>
+                </form>
             </div>
             <div class="products-container">
                 <?php
-                include '../classes/dbh.class.php';
-                include '../classes/products.class.php';
-                include '../classes/productsview.class.php';
-                $products = new ProductsView();
-                $products->showAllProducts();
+                if(isset($_GET['colors'])) {
+                    foreach($filteredIds as $productId) {
+                        echo $products->showProductContainer($productId);
+                    }
+                } else {
+                    $products->showAllProducts();
+                }
                 ?>
             </div>
         </div>

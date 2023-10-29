@@ -40,4 +40,32 @@ class Products extends Dbh {
         $stmt = null;
         return $summer;
     }
+
+    protected function getFilterSettings() {
+        $stmt = $this->connect()->query('SELECT * FROM colors;');
+        if(!$stmt) {
+            $stmt = null;
+            header('location: /PHP/Projet02/index.php?error=stmtfailed');
+            exit();
+        }
+        $filter = $stmt->fetchAll();
+        $stmt = null;
+        return $filter;
+    }
+
+    protected function getIdsWithColorId($colorId) {
+        $stringArray = [];
+        $stmt = $this->connect()->prepare('SELECT prod_id FROM products WHERE prod_color_id in (?)');
+        if(!$stmt->execute([$colorId])) {
+            $stmt = null;
+            header('');
+            exit();
+        }
+        $ids = $stmt->fetchAll();
+        $stmt = null;
+        foreach($ids as $id) {
+            $stringArray[] = $id['prod_id'];
+        }
+        return $stringArray;
+    }
 }
