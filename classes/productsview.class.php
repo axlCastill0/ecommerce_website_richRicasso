@@ -64,12 +64,12 @@ class ProductsView extends Products {
     public function showFilterSettings($checked) {
         $filterSettings = $this->getFilterSettings();
         foreach ($filterSettings as $setting) {
-            if(in_array($setting['prod_id'], $checked)) {
-                echo '<div class="setting"><input type="checkbox" name="colors[]" value="' . $setting['prod_id'] . '" checked>'
-                . $setting['color'] . '</div>';
+            if(in_array($setting['color_id'], $checked)) {
+                echo '<div class="setting"><input type="checkbox" name="colors[]" value="' . $setting['color_id'] . '" checked>'
+                . $setting['color_name'] . '</div>';
             } else {
-                echo '<div class="setting"><input type="checkbox" name="colors[]" value="' . $setting['prod_id'] . '">'
-                . $setting['color'] . '</div>';
+                echo '<div class="setting"><input type="checkbox" name="colors[]" value="' . $setting['color_id'] . '">'
+                . $setting['color_name'] . '</div>';
             }
         }
     }
