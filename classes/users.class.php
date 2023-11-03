@@ -83,4 +83,29 @@ class Users extends Dbh
         $stmt = null;
         return $resultCheck;
     }
+
+    protected function checkNewsletterEmail($email)
+    {
+        $stmt = $this->connect()->prepare('SELECT id FROM newsletter WHERE email = ?;');
+        if (!$stmt->execute(array($email))) {
+            $stmt = null;
+            $resultCheck = false;
+        }
+        $resultCheck = true;
+        if ($stmt->rowCount() > 0) {
+            $resultCheck = false;
+        }
+        $stmt = null;
+        return $resultCheck;
+    }
+
+    protected function registerNewsletterDb($email) {
+        $stmt = $this->connect()->prepare("INSERT INTO newsletter (email) VALUES (?)");
+        if (!$stmt->execute(array($email))) {
+            $stmt = null;
+            header("location: /PHP/Projet02/index.php?error=newsletterfailed");
+            exit();
+        }
+        $stmt = null;
+    }
 }

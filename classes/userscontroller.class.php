@@ -41,6 +41,22 @@ class UsersController extends Users {
         $this->setUser($this->uid, $this->email, $this->pwd);
     }
 
+    public function registerNewsletter() {
+        if($this->emptyInput() == false) {
+            header("location: /PHP/Projet02/pages/infolettre.php?error=emptyinput");
+            exit();
+        }
+        if($this->invalidEmail() == false) {
+            header("location: /PHP/Projet02/pages/infolettre.php?error=invalidemail");
+        }
+        if($this->existingNewsletter() == false) {
+            header("location: /PHP/Projet02/pages/infolettre.php?error=alreadysubscribed");
+            exit();
+        }
+
+        $this->registerNewsletterDb($this->email);
+    }
+
     private function emptyInput() {
         $result = true;
         if(empty($this->uid) || empty($this->email) || empty($this->pwd)) {
@@ -68,6 +84,14 @@ class UsersController extends Users {
     private function existingUser() {
         $result = true;
         if (!$this->checkUser($this->uid, $this->email)) {
+            $result = false;
+        }
+        return $result;
+    }
+
+    private function existingNewsletter() {
+        $result = true;
+        if (!$this->checkNewsletterEmail($this->email)) {
             $result = false;
         }
         return $result;

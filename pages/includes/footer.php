@@ -22,7 +22,7 @@ session_start();
                 if(isset($_SESSION["user_id"])) { ?>
                     <li><a href="/PHP/Projet02/pages/account.php"><i class="far fa-newspaper"></i></a></li>
                 <?php } else { ?>
-                    <li><a href="/PHP/Projet02/pages/login.php"><i class="far fa-newspaper"></i></a></li>
+                    <li><a href="/PHP/Projet02/pages/infolettre.php"><i class="far fa-newspaper"></i></a></li>
                 <?php } ?>
             </ul>
         </div>
