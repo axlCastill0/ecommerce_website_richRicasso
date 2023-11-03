@@ -31,7 +31,9 @@ class EditUserController extends EditUser {
         $_SESSION['user_lastname'] = $this->lastname;
         $_SESSION['user_newsletter'] = $this->newsletter;
 
-        $this->updateUser($this->user_id, $this->email, $this->firstname, $this->lastname, $this->newsletter);
+        $this->updateUserNewsletter($this->newsletter, $this->email);
+
+        $this->updateUser($this->user_id, $this->email, $this->firstname, $this->lastname);
     }
 
     private function emptyInput() {

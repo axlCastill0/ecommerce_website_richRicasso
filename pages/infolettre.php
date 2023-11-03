@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Newsletter</title>
+    <link rel="stylesheet" href="/PHP/Projet02/css/styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 300px 0px;
             padding: 0;
             background-color: #f4f4f4;
         }
@@ -41,6 +42,7 @@
     </style>
 </head>
 <body>
+    <?php    include(__DIR__ . '/includes/header.php');    ?>
     <div class="container">
         <h1>Subscribe to our newsletter</h1>
         <form action="/PHP/Projet02/includes/newsletter.inc.php" method="post">
